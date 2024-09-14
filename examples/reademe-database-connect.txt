@@ -1,0 +1,50 @@
+Contents
+Basic - JDBC
+1. Creating a Postgresql Database 
+	a. Accessing services
+	b. Creating a database
+	c. Making a connection
+	d. Creating person table
+	e. Adding records
+	f. Select records
+
+2. Connecting to Postgresql DBMS from a java program
+	a. Connecting to an existing DBMS schema	
+	b. Adding, modifying, selecting data
+
+
+
+---
+JPA/Hibernate ...
+
+1. Introduction
+	a. ORM 
+	b. JPA
+	c. Hibernate
+
+---
+1. Creating java with JPA and Hibernate app
+	a. Create Java mvn project
+	b. Add mvn dependencies (hibernate , sql driver)
+	c. Add persistence.xml in resources/META-INF 
+		(https://docs.jboss.org/hibernate/orm/6.6/introduction/html_single/Hibernate_Introduction.html)
+	d. Create Entity Manager
+		1. entity manager factory 
+			-> entity manager 
+				-> transaction
+					-> persist
+						-> commit
+	
+
+2. Entity
+3. Embedded Entity
+4. Composition Key 
+5. Inheritance
+6. Entity Relationships
+	a. One To One
+	a. One To Many - Many To One
+	c. Many To Many
+7. Entity Manager [C]reate/[R]ead/[U]pdate/[D]elete 
+8. Queries/Named Queries 
+
+
