@@ -1,5 +1,5 @@
 CREATE TABLE person(
-    id int NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     first_name varchar(255),
     last_name varchar(255),
     city varchar(255),

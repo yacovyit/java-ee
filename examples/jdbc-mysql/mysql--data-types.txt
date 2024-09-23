@@ -1,0 +1,49 @@
+#######################################################################
+# Number - integer
+
+#Type	 (Bytes)	Min(SIGNED)
+TINYINT	    1	    -128	    0	    127	            255
+SMALLINT	2	    -32768	    0	    32767	        65535
+MEDIUMINT	3	    -8388608	0	    8388607	        16777215
+INT	        4	    -2147483648	0	    2147483647	    4294967295
+BIGINT	    8	    -2^63    	0	    2^63-1	        2^64-1
+-----------------------------------------------------------------
+# Number - Decimal fixed point(exact value)
+DECIMAL(5,2) - -999.99 - 999.99
+precision  - number of digits
+scale - number of digits after the decimal point
+-----------------------------------------------------------------
+
+FLOAT	4 bytes
+DOUBLE	8 bytes
+
+############################################
+
+# Data and Time
+
+Data Type	        “Zero” Value
+DATE	            '0000-00-00'
+TIME	            '00:00:00'
+DATETIME	        '0000-00-00 00:00:00'
+TIMESTAMP	        '0000-00-00 00:00:00'
+YEAR	            '0000'
+##############################################
+
+
+-- CHAR
+-- VARCHAR
+-- TEXT - TINYTEXT, TEXT, MEDIUMTEXT, LONGTEXT
+      Type | Maximum length
+-----------+-------------------------------------
+  TINYTEXT |           255      bytes
+      TEXT |        65,535  64  KiB
+MEDIUMTEXT |    16,777,215  16  MiB
+  LONGTEXT | 4,294,967,295  4   GiB
+
+-- BINARY
+-- VARBINARY
+-- BLOB - TINYBLOB, BLOB, MEDIUMBLOB, LONGBLOB()
+
+
+
+
