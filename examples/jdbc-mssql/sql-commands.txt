@@ -1,0 +1,18 @@
+create database demo
+go
+
+-- select database
+use demo
+
+-- default schema is dbo
+create table person
+(
+    id  bigint not null identity primary key,
+    first_name   nvarchar(20),
+    last_name    nvarchar(20),
+    city         nvarchar(50),
+    phone_number nvarchar(12)
+)
+go
+
+
