@@ -1,6 +1,8 @@
 package org.example;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PersonRepository {
     private final Connection connection;
@@ -13,13 +15,14 @@ public class PersonRepository {
         try (Statement statement = this.connection.createStatement()) {
             String query = "select * from person";
             ResultSet resultSet = statement.executeQuery(query);
-
+            List<Person> personList = new ArrayList<>();
             while (resultSet.next()) {
                 String firstName = resultSet.getString("first_name");
                 String lastName = resultSet.getString("last_name");
                 String city = resultSet.getString("city");
                 String phoneNumber = resultSet.getString("phone_number");
 
+                personList.add(new Person(firstName, lastName, city, phoneNumber));
                 System.out.println("---------------");
                 System.out.println("Person details");
                 System.out.println("---------------");
@@ -28,6 +31,7 @@ public class PersonRepository {
                 System.out.println("city = " + city);
                 System.out.println("phone_number = " + phoneNumber);
             }
+            System.out.println("we have " + personList.size() + " persons");
 
 
         } catch (SQLException e) {
