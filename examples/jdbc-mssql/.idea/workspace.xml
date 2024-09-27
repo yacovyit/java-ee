@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95942f33-b26a-4e3a-9005-7da88a611ecc" name="Changes" comment="add new example&#10;connect mssql server via jdbc">
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/src/main/java/org/example/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jpa-hibernate-mssql/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../entity-example/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../entity-example/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="95942f33-b26a-4e3a-9005-7da88a611ecc" name="Changes" comment="add new example&#10;connect mssql server via jdbc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +85,7 @@
       <workItem from="1727325519579" duration="75000" />
       <workItem from="1727325933937" duration="52000" />
       <workItem from="1727326006518" duration="23000" />
+      <workItem from="1727326201355" duration="477000" />
     </task>
     <task id="LOCAL-00001" summary="add new example&#10;connect mssql server via jdbc">
       <option name="closed" value="true" />
