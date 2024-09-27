@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Persistence</ID>
+  <OriginalElement>JavaeeElement:/db58e67d/hibernate/_002-entitiy-mssql/jpa/JPA/PersistenceModel</OriginalElement>
+  <nodes>
+    <node x="-82.0" y="227.0">Flight#file:///Users/yacovyi/projects/java-ee/java/jpa-hibernate/_002-entitiy-mssql/src/main/java/org/example/flight/Flight.java</node>
+    <node x="-71.5" y="77.0">Passenger#file:///Users/yacovyi/projects/java-ee/java/jpa-hibernate/_002-entitiy-mssql/src/main/java/org/example/flight/Passenger.java</node>
+    <node x="-84.0" y="-50.0">Ticket#file:///Users/yacovyi/projects/java-ee/java/jpa-hibernate/_002-entitiy-mssql/src/main/java/org/example/flight/Ticket.java</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Flight#file:///Users/yacovyi/projects/java-ee/java/jpa-hibernate/_002-entitiy-mssql/src/main/java/org/example/flight/Flight.java" target="Passenger#file:///Users/yacovyi/projects/java-ee/java/jpa-hibernate/_002-entitiy-mssql/src/main/java/org/example/flight/Passenger.java" relationship="RELATION">
+      <point x="0.0" y="-38.5" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="Passenger#file:///Users/yacovyi/projects/java-ee/java/jpa-hibernate/_002-entitiy-mssql/src/main/java/org/example/flight/Passenger.java" target="Ticket#file:///Users/yacovyi/projects/java-ee/java/jpa-hibernate/_002-entitiy-mssql/src/main/java/org/example/flight/Ticket.java" relationship="RELATION">
+      <point x="0.0" y="-50.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="-0.5" y="127.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Embeddables</Category>
+    <Category>Properties</Category>
+    <Category>Superclasses</Category>
+  </Categories>
+</Diagram>
+
