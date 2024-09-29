@@ -1,8 +1,7 @@
-package org.example.crudbook.repository;
+package org.example.crud;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-import org.example.crudbook.entity.Book;
 
 public class BookRepository {
     private EntityManager entityManager;

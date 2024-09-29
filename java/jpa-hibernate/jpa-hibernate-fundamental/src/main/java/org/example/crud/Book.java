@@ -1,4 +1,4 @@
-package org.example.crudbook.entity;
+package org.example.crud;
 
 
 import jakarta.persistence.Entity;
