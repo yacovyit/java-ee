@@ -25,8 +25,6 @@ public class App {
 
             Student fetchedStudent = entityManager.find(Student.class, student.getId());
             System.out.println("Student Courses: " + fetchedStudent.getCourses());
-
-
         }
 
     }
