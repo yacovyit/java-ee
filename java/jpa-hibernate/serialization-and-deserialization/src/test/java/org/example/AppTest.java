@@ -38,7 +38,7 @@ public class AppTest
         assertTrue( true );
     }
 
-    public void testPerson() throws IOException, ClassNotFoundException {
+    public void testPersonSerialization() throws IOException, ClassNotFoundException {
         Person person = new Person("John", "Doe", 30);
 
         // Test fields
