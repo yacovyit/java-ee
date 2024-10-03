@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Entity
 public class DVD extends Item  {
 
-    @Column(name = "total_duration")  // assuming total duration is a float representing minutes.  Use Float.class.
+    @Column(name = "total_duration")
     private Float totalDuration;
 
     private Genre genre;

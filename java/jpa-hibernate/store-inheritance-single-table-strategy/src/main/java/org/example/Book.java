@@ -12,10 +12,10 @@ public class Book extends Item  {
     @Column(name = "page_count")
     private Integer pageCount;
 
-    @Column(name = "author", length = 100)  // assuming author's name is 100 characters or less.
+    @Column(name = "author", length = 100)
     private String author;
 
-    @Column(name = "publication_date")  // assuming publication date is a date.  Use java.time.LocalDate.
+    @Column(name = "publication_date")
     private LocalDate publicationDate;
 
     public Integer getPageCount() {
