@@ -14,7 +14,7 @@ public class Student {
     private Long id;
     private String name;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(
             name = "student_id",
             referencedColumnName = "id"

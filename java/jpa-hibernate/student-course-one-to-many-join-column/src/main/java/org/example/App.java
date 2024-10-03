@@ -18,9 +18,15 @@ public class App {
             student.addCourse(new Course("Java Fundamentals"));
 
             entityManager.persist(student);
-            student.getCourses().stream().forEach(entityManager::persist);
+            // Instead of persisting all courses, we can use CascadeType.PERSIST
+            //student.getCourses().stream().forEach(entityManager::persist);
 
             entityManager.getTransaction().commit();
+
+            Student fetchedStudent = entityManager.find(Student.class, student.getId());
+            System.out.println("Student Courses: " + fetchedStudent.getCourses());
+
+
         }
 
     }
