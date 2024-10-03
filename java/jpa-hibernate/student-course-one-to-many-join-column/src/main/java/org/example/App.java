@@ -14,6 +14,7 @@ public class App {
 
             student.addCourse(new Course("Spring Boot"));
             student.addCourse(new Course("React"));
+            student.addCourse(new Course("React")); // This course should be skipped as it's already in the student's courses list.
             student.addCourse(new Course("Java Fundamentals"));
 
             entityManager.persist(student);
