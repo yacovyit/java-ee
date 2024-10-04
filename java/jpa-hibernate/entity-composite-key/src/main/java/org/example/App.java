@@ -30,6 +30,7 @@ public class App
             4, It must be Serializable.
        */
 
+
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mssql");
         try (EntityManager entityManager = entityManagerFactory.createEntityManager()) {
 
