@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="749bf9c0-981a-45af-b445-5b495f8e0020" name="Changes" comment="rename 002 to jpa-hibernate-flights">
+    <list default="true" id="749bf9c0-981a-45af-b445-5b495f8e0020" name="Changes" comment="Add Table of content in README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/entity-composite-key/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-composite-key/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/store-inhritance-transient-mapped-super-class/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/store-inhritance-transient-mapped-super-class/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/store-inhritance-transient-mapped-super-class/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/store-inhritance-transient-mapped-super-class/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/store-inhritance-transient-mapped-super-class/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/store-inhritance-transient-mapped-super-class/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/store-inhritance-transient-mapped-super-class/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/store-inhritance-transient-mapped-super-class/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ppt/lab-1-JAVA-EE.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ppt/lab-2-database-introduction.key" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +112,7 @@
       <workItem from="1727313396343" duration="1524000" />
       <workItem from="1727419399719" duration="73000" />
       <workItem from="1727572742386" duration="5283000" />
-      <workItem from="1728021607361" duration="4278000" />
+      <workItem from="1728021607361" duration="4912000" />
     </task>
     <task id="LOCAL-00001" summary="rename 002 to jpa-hibernate-flights">
       <option name="closed" value="true" />
@@ -132,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727419453769</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Table of content in README.md">
+      <option name="closed" value="true" />
+      <created>1728026208110</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728026208110</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +138,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rename 002 to jpa-hibernate-flights" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename 002 to jpa-hibernate-flights" />
+    <MESSAGE value="Add Table of content in README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Table of content in README.md" />
   </component>
 </project>
