@@ -1,9 +1,6 @@
 package org.example;
 
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Person {
@@ -41,6 +38,9 @@ public class Person {
     }
 
     @Embedded
+    @AttributeOverrides({
+            @AttributeOverride( name = "zipCode", column = @Column(name = "zip_code"))
+    })
     private Address address;
 
     public Address getAddress() {
