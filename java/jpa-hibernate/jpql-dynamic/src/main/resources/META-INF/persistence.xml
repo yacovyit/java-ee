@@ -9,7 +9,8 @@
 
             <!-- mssql in-memory database -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:sqlserver://localhost;databaseName=demo"/>
+                      value="jdbc:sqlserver://localhost;databaseName=demo;encrypt=False;trustServerCertificate=False"/>
+
             <property name="jakarta.persistence.jdbc.driver"
                       value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
 
@@ -23,9 +24,7 @@
             <property name="hibernate.agroal.maxSize"
                       value="20"/>
 
-<!--
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
--->
             <!-- display SQL in console -->
 
             <property name="hibernate.show_sql" value="true"/>
@@ -38,7 +37,7 @@
             <!--            <property name="hibernate.hbm2ddl.auto" value="validate"/>-->
             <!--            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
 
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
 
         </properties>
 
