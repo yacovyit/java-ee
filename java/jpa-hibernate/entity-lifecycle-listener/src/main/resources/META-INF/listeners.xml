@@ -1,0 +1,9 @@
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0">
+    <persistence-unit-metadata>
+        <persistence-unit-defaults>
+            <entity-listeners>
+                <entity-listener class="org.example.LifecycleListener"></entity-listener>
+            </entity-listeners>
+        </persistence-unit-defaults>
+    </persistence-unit-metadata>
+</entity-mappings>
