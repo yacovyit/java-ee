@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="749bf9c0-981a-45af-b445-5b495f8e0020" name="Changes" comment="update ppt and key files&#10;add reference in toc to jpql named query project">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/entity-callback-annotations/src/main/java/org/example/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-callback-annotations/src/main/java/org/example/Student.java" afterDir="false" />
+    <list default="true" id="749bf9c0-981a-45af-b445-5b495f8e0020" name="Changes" comment="update entity-callback-annotations project in toc">
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/src/main/java/org/example/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/src/main/java/org/example/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-listeners/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/jpa-hibernate/entity-callback-annotations/.idea/dataSources.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +126,7 @@
       <workItem from="1727572742386" duration="5283000" />
       <workItem from="1728021607361" duration="6599000" />
       <workItem from="1728044045766" duration="170000" />
-      <workItem from="1728106271727" duration="1848000" />
+      <workItem from="1728106271727" duration="2804000" />
     </task>
     <task id="LOCAL-00001" summary="rename 002 to jpa-hibernate-flights">
       <option name="closed" value="true" />
@@ -164,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728119513545</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update entity-callback-annotations project in toc">
+      <option name="closed" value="true" />
+      <created>1728125780351</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728125780351</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +197,7 @@
     <MESSAGE value="comment &quot;drop-and-create&quot;" />
     <MESSAGE value="add readme for jpql dynamic query" />
     <MESSAGE value="update ppt and key files&#10;add reference in toc to jpql named query project" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ppt and key files&#10;add reference in toc to jpql named query project" />
+    <MESSAGE value="update entity-callback-annotations project in toc" />
+    <option name="LAST_COMMIT_MESSAGE" value="update entity-callback-annotations project in toc" />
   </component>
 </project>
