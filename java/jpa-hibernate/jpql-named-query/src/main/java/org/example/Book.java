@@ -9,7 +9,20 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@NamedQuery(name = Book.COUNT_BOOKS_BY_AUTHOR_NAME, query = "SELECT count(b) from Author a JOIN a.books b WHERE a.firstName = ?1 AND a.lastName = ?2")
+@NamedQuery(name = Book.COUNT_BOOKS_BY_GENRE, query = "SELECT COUNT(b) FROM Book b WHERE b.genre = :genre")
+@NamedQuery(name = Book.BOOKS_BETWEEN_PUBLICATION_YEARS, query = "SELECT b FROM Book b WHERE YEAR(b.publishDate) BETWEEN :fromYear AND :toYear ORDER BY b.publishDate ASC")
+@NamedQuery(name = Book.EXPENSIVE_BOOKS, query = "SELECT b FROM Book b WHERE b.unitPrice >  (SELECT AVG(b2.unitPrice) FROM Book b2) AND b.publishDate >= :localDate ORDER BY b.unitPrice DESC LIMIT :limit")
+// After changing the unitPrice to BigDecimal, the query should be adjusted as well.
+// @NamedQuery(name = Book.EXPENSIVE_BOOKS, query = "SELECT b FROM Book b WHERE b.unitPrice >  (SELECT CAST(AVG(b2.unitPrice) AS BIGDECIMAL(10,2)) FROM Book b2) AND b.publishDate >= :localDate ORDER BY b.unitPrice DESC LIMIT :limit")
+
 public class Book {
+    // Constants for named queries
+    public static final String COUNT_BOOKS_BY_AUTHOR_NAME = "Book.countBooksByAuthorName";
+    public static final String COUNT_BOOKS_BY_GENRE = "Book.countBooksByGenre";
+    public static final String BOOKS_BETWEEN_PUBLICATION_YEARS = "Book.booksBetweenPublicationYears";
+    public static final String EXPENSIVE_BOOKS = "Book.expensiveBooks";
+
     @Id
     @GeneratedValue
     private Long id;

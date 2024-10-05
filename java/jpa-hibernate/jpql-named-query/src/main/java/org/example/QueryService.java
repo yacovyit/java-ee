@@ -3,9 +3,11 @@ package org.example;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class QueryService {
@@ -17,9 +19,8 @@ public class QueryService {
     }
 
     public Long countBooksByAuthorName(String firstName, String lastName) {
-        // position parameters start from 1
-        String queryString = "SELECT count(b) from Author a JOIN a.books b WHERE a.firstName = ?1 AND a.lastName = ?2";
-        TypedQuery<Long> typedQuery = entityManager.createQuery(queryString, Long.class);
+        // using createNamedQuery function
+        TypedQuery<Long> typedQuery = entityManager.createNamedQuery(Book.COUNT_BOOKS_BY_AUTHOR_NAME, Long.class);
         typedQuery.setParameter(1, firstName);
         typedQuery.setParameter(2, lastName);
 
@@ -27,41 +28,52 @@ public class QueryService {
     }
 
     public Long countBooksByGenre(Genre genre) {
-        // using named parameter (to avoid SQL injection)
-        String queryString = "SELECT COUNT(b) FROM Book b WHERE b.genre = :genre";
-        Query query = entityManager.createQuery(queryString);
+        Query query = entityManager.createNamedQuery(Book.COUNT_BOOKS_BY_GENRE, Long.class);
         query.setParameter("genre", genre);
         return (Long) query.getSingleResult();
     }
 
     public List<Book> getBooksBetweenPublicationYears(int fromYear, int toYear) {
-        String queryString = "SELECT b FROM Book b WHERE YEAR(b.publishDate) BETWEEN :fromYear AND :toYear ORDER BY b.publishDate ASC";
-        TypedQuery<Book> typedQuery = entityManager.createQuery(queryString, Book.class);
+        TypedQuery<Book> typedQuery = entityManager.createNamedQuery(Book.BOOKS_BETWEEN_PUBLICATION_YEARS, Book.class);
         typedQuery.setParameter("fromYear", fromYear);
         typedQuery.setParameter("toYear", toYear);
         return typedQuery.getResultList();
     }
 
     public List<Book> getExpensiveBooks(int limit, LocalDate localDate) {
-        BigDecimal avgPrice = entityManager.createQuery("SELECT CAST(AVG(b.unitPrice) AS BIGDECIMAL(10,2)) FROM Book b", BigDecimal.class).getSingleResult();
-        System.out.println("Average book price: " + avgPrice);
+        // for dynamic query we can use CriteriaBuilder ...
+        TypedQuery<Book> typedQuery = entityManager.createNamedQuery(Book.EXPENSIVE_BOOKS, Book.class);
 
-        //String queryString = "SELECT b FROM Book b WHERE b.unitPrice > :avgPrice  ORDER BY b.unitPrice DESC LIMIT :limit";\
-        String queryString = "SELECT b FROM Book b WHERE b.unitPrice > :avgPrice";
-        if (localDate!= null) {
-            queryString += " AND b.publishDate >= :localDate";
-        }
-        queryString += " ORDER BY b.unitPrice DESC LIMIT :limit";
-
-        TypedQuery<Book> typedQuery = entityManager.createQuery(queryString, Book.class);
-        typedQuery.setParameter("avgPrice", avgPrice);
         typedQuery.setParameter("limit", limit);
-
-        if (localDate!= null) {
-            typedQuery.setParameter("localDate", localDate);
-        }
+        typedQuery.setParameter("localDate", localDate);
 
         return typedQuery.getResultList();
     }
 
+    public List<Book> getExpensiveBooksByCriteriaBuilder(int limit, LocalDate localDate) {
+        // Create a CriteriaBuilder and a CriteriaQuery
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Book> cq = cb.createQuery(Book.class);
+        Root<Book> root = cq.from(Book.class);
+
+        // average price of all books
+        Subquery<Double> sub = cq.subquery(Double.class);
+        Root<Book> subRoot = sub.from(Book.class);
+        sub.select(cb.avg(subRoot.get("unitPrice")));
+
+        // Create the main query
+        List<Predicate> predicates = new ArrayList<>();
+        predicates.add(cb.greaterThan(root.get("unitPrice"), sub));
+
+        // Add optional date filter
+        if (localDate!= null) {
+            predicates.add(cb.greaterThanOrEqualTo(root.get("publishDate").as(LocalDate.class), localDate));
+        }
+        cq.where(cb.and(predicates.toArray(new Predicate[]{})));
+
+        cq.orderBy(cb.desc(root.get("unitPrice").as(Double.class)));
+
+        List<Book> books = entityManager.createQuery(cq).setMaxResults(limit).getResultList();
+        return books;
+    }
 }

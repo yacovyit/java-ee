@@ -4,7 +4,9 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
+import java.time.LocalDate;
 import java.util.List;
+
 
 /**
  * Hello world!
@@ -30,11 +32,32 @@ public class App
                   System.out.println(book.getTitle() + " published in " + book.getPublishDate().getYear());
               }
 
-              List<Book> expensiveBooks = queryService.getExpensiveBooks(5, null);
+              LocalDate fromPublicationDate =   LocalDate.of(1950, 1, 1);
+              int limit = 2;
+              List<Book> expensiveBooks = queryService.getExpensiveBooks(limit, fromPublicationDate);
               System.out.println("The most expensive books:");
               for (Book book : expensiveBooks) {
                   System.out.println("[" +book.getTitle() + "] at a price of $" + book.getUnitPrice());
               }
+
+              List<Book> expensiveBooksByCriteriaBuilder = queryService.getExpensiveBooksByCriteriaBuilder(limit, fromPublicationDate);
+
+              System.out.println("The most expensive books (Criteria Builder):");
+              for (Book book : expensiveBooksByCriteriaBuilder) {
+                  System.out.println("[" + book.getTitle() + "] at a price of $" + book.getUnitPrice());
+              }
+
+              System.out.println("Checking if the book objects match...");
+              for (int i = 0; i < expensiveBooks.size(); i++) {
+                 Book bookA = expensiveBooks.get(i);
+                 Book bookB = expensiveBooksByCriteriaBuilder.get(i);
+
+                 if (!bookA.getTitle().equals(bookB.getTitle()) ||!bookA.getUnitPrice().equals(bookB.getUnitPrice())) {
+                     System.out.println("Book titles or prices don't match at index " + i);
+                 } else {
+                  System.out.println("Book objects match at index " + i);}
+             }
+
         }
     }
 }
