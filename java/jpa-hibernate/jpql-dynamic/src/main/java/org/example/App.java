@@ -17,17 +17,26 @@ public class App
     public static void main( String[] args ) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("mssql");
         try (EntityManager entityManager = entityManagerFactory.createEntityManager()) {
-                entityManager.getTransaction().begin();
+              new InitDB(entityManager).init();
+              QueryService queryService = new QueryService(entityManager);
 
-                Author issacAsimov = new Author("Issac", "Asimov");
-                Book foundation = new Book("Foundation", "978-0441154860", 28f, LocalDate.of(1951,1,1), 28, Genre.SCI_FI);
-                foundation.addAuthor(issacAsimov);
+              Long issacAsimoveBooksCount =  queryService.countBooksByAuthorName("Issac", "Asimov");
+              System.out.println("Issac Asimov wrote " + issacAsimoveBooksCount + " books.");
 
-                entityManager.persist(issacAsimov);
-                entityManager.persist(foundation);
+              long scienceFictionBooksCount = queryService.countBooksByGenre(Genre.SCI_FI);
+              System.out.println("There are " + scienceFictionBooksCount + " science fiction books in the library.");
 
-                entityManager.getTransaction().commit();
+              List<Book> recentBooks = queryService.getBooksBetweenPublicationYears(1930, 1964);
+              System.out.println("Recently published books:");
+              for (Book book : recentBooks) {
+                  System.out.println(book.getTitle() + " published in " + book.getPublishDate().getYear());
+              }
 
+              List<Book> expensiveBooks = queryService.getExpensiveBooks(5, null);
+              System.out.println("The most expensive books:");
+              for (Book book : expensiveBooks) {
+                  System.out.println("[" +book.getTitle() + "] at a price of $" + book.getUnitPrice());
+              }
         }
     }
 }

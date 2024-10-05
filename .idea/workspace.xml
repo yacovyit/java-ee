@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="749bf9c0-981a-45af-b445-5b495f8e0020" name="Changes" comment="Add Hibernate todo's tasks in README.md">
-      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-composite-key/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-composite-key/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-composite-key/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/jpa-hibernate/entity-composite-key/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="749bf9c0-981a-45af-b445-5b495f8e0020" name="Changes" comment="comment &quot;drop-and-create&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +110,7 @@
       <workItem from="1727419399719" duration="73000" />
       <workItem from="1727572742386" duration="5283000" />
       <workItem from="1728021607361" duration="6599000" />
+      <workItem from="1728044045766" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="rename 002 to jpa-hibernate-flights">
       <option name="closed" value="true" />
@@ -141,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728026951524</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="comment &quot;drop-and-create&quot;">
+      <option name="closed" value="true" />
+      <created>1728044206248</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728044206248</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +154,7 @@
     <MESSAGE value="rename 002 to jpa-hibernate-flights" />
     <MESSAGE value="Add Table of content in README.md" />
     <MESSAGE value="Add Hibernate todo's tasks in README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Hibernate todo's tasks in README.md" />
+    <MESSAGE value="comment &quot;drop-and-create&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment &quot;drop-and-create&quot;" />
   </component>
 </project>

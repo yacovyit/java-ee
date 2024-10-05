@@ -2,6 +2,7 @@ package org.example;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Collections;
@@ -16,8 +17,8 @@ public class Book {
 
     private String title;
     private String isbn;
-    @Column(name = "unit_price")
-    private Float unitPrice;
+    @Column(name = "unit_price", precision = 10, scale = 2)
+    private BigDecimal unitPrice;
     @Column(name = "publication_date")
     private LocalDate publishDate;
     @Column(name = "number_of_pages")
@@ -34,7 +35,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String isbn, Float unitPrice, LocalDate publishDate, Integer numberOfPages, Genre genre) {
+    public Book(String title, String isbn, BigDecimal unitPrice, LocalDate publishDate, Integer numberOfPages, Genre genre) {
         this.title = title;
         this.isbn = isbn;
         this.unitPrice = unitPrice;
@@ -67,11 +68,11 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public Float getUnitPrice() {
+    public BigDecimal getUnitPrice() {
         return unitPrice;
     }
 
-    public void setUnitPrice(Float unitPrice) {
+    public void setUnitPrice(BigDecimal unitPrice) {
         this.unitPrice = unitPrice;
     }
 
