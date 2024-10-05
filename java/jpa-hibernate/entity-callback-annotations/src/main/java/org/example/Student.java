@@ -72,7 +72,9 @@ public class Student {
         }
     }
 
+    @PostLoad
     @PostPersist
+    @PostUpdate
     public void calculateAge() {
        if (birthDateTime == null) {
            age = null;
