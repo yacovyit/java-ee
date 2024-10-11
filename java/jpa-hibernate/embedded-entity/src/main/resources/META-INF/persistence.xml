@@ -9,7 +9,7 @@
 
             <!-- mssql in-memory database -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:sqlserver://localhost;databaseName=demo"/>
+                      value="jdbc:sqlserver://localhost;databaseName=your-db-name"/>
             <property name="jakarta.persistence.jdbc.driver"
                       value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
 

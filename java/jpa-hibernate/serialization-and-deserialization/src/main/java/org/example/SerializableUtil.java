@@ -5,7 +5,7 @@ import java.io.*;
 public class SerializableUtil {
     public void serializeObject(Object obj, String fileName) throws IOException, ClassNotFoundException {
         try {
-            FileOutputStream fileOut = new FileOutputStream("person.ser");
+            FileOutputStream fileOut = new FileOutputStream(fileName);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(obj);
             out.close();
@@ -18,7 +18,7 @@ public class SerializableUtil {
     public Object deserializeObject(String fileName) {
         Object obj = null;
         try {
-            FileInputStream fileIn = new FileInputStream("person.ser");
+            FileInputStream fileIn = new FileInputStream(fileName);
             ObjectInputStream in = new ObjectInputStream(fileIn);
             obj = in.readObject();
             in.close();
